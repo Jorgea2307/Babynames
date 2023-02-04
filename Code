@@ -1,0 +1,14 @@
+
+--we're interested in learning the top five baby names for boys in the US in 2014
+
+SELECT
+  name,
+  count
+FROM
+  `babynames.names_2014`
+WHERE
+  gender = 'M'
+ORDER BY -- order by count in descending order, sorted from highest to lowest. 
+  count DESC
+LIMIT
+  5
